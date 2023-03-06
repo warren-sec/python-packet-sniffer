@@ -66,7 +66,7 @@ def main():
                 print(TAB_2 + 'Source Port: {}, Destination Port: {}'.format(src_port, dest_port))
                 print(TAB_2 + 'Sequence: {}, Acknowledgement: {}'.format(sequence, acknowledgement))
                 print(TAB_2 + 'Flags: ')
-                print(TAB_3 + 'URG: {}, ACK: {}, PSH: {}, RST: {}, SYN: {}, FIN: {}'.format(flag_urg. flag_ack, flag_psh, flag_rst, flag_syn, flag_fin))
+                print(TAB_3 + 'URG: {}, ACK: {}, PSH: {}, RST: {}, SYN: {}, FIN: {}'.format(flag_urg, flag_ack, flag_psh, flag_rst, flag_syn, flag_fin))
                 print(TAB_2 + 'Data: ')
                 print(format_multi_line(DATA_TAB_3, data))
 
