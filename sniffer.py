@@ -1,4 +1,5 @@
 import socket
+#import libpcap
 import struct
 import textwrap
 
@@ -14,11 +15,12 @@ def get_mac_addr(bytes_addr):
 
 def main():
     conn = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(3))
-    dest_mac, src_mac, eth_proto, data = ethernet_frame(raw_data)
-    print('\nEthernet Frame: ')
-    print('Destination: {}, Source: {}, Protocol: {}'.format(dest_mac, src_mac, eth_proto))
 
     while True:
         raw_data, addr = conn.recvfrom(65536)
+        dest_mac, src_mac, eth_proto, data = ethernet_frame(raw_data)
+        print('\nEthernet Frame: ')
+        print('Destination: {}, Source: {}, Protocol: {}'.format(dest_mac, src_mac, eth_proto))
+
 
 main()   
